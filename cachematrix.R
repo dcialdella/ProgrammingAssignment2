@@ -1,7 +1,7 @@
 
 ## 2 functions for Asignments Number 2
 ## R programming course U.J.H.
-##
+## DAC 2016-06-14
 ##
 
 
@@ -9,7 +9,25 @@
 ##    copy / paste from orig page
 makeCacheMatrix <- function(x = matrix()) 
 {
+  set<-function()
+  {
+  }
 
+  get <- function() 
+  {
+  }
+
+  setInverse <- function() 
+  {
+  }
+
+  getInverse <- function()
+  {
+  }
+  
+  list(set = set, get = get,
+	     setmean = setmean,
+	     getmean = getmean)
 }
 
 
@@ -21,9 +39,17 @@ makeCacheMatrix <- function(x = matrix())
 
 cacheSolve <- function(x, ...) 
 {
-
-
         ## Return a matrix that is the inverse of 'x'
+
 }
 
 
+
+# How test it
+# Create a sample matrix (easy)
+set.seed(25) # funny number for this sample
+x <- matrix( sample(1:25), 5,5)
+func_process <- makeCacheMatrix(x)
+
+# read matrix complete
+func_process$get()
