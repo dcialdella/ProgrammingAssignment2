@@ -6,11 +6,11 @@
 
 ## This function creates a special "matrix" object that can cache its inverse.
 ##    copy / paste from orig page
-makeCacheMatrix <- function(x = matrix()) 
+makeCacheMatrix <- function( x = matrix() ) 
 {
   m <- NULL
 
-  set<-function()
+  set<-function( y )
   {
     x <<- y
     m <<- NULL
@@ -18,7 +18,7 @@ makeCacheMatrix <- function(x = matrix())
 
   get <- function() 
   {
-  	x
+    x
   }
 
   setInverse <- function() 
@@ -48,16 +48,24 @@ cacheSolve <- function(x, ...)
 
 
 
-# How test it
+//
+How test it
+
 # Create a sample matrix (easy)
-# 
-#      set.seed(25) # funny number for this sample
-#      x <- matrix( sample(1:25), 5,5)
-#      func_process <- makeCacheMatrix(x)
-#
-# read matrix complete
-#
-#      func_process$get()
-#
-#
-#
+  set.seed(25) # funny number for this sample
+  x <- matrix( sample(1:25), 5,5)
+  func_process <- makeCacheMatrix(x)
+  func_process$get()   # Read cachematrix complete
+
+# Create Another matrix for testing
+  set.seed(52)
+  x <- matrix( sample(1:25), 5,5)
+  func_process <- makeCacheMatrix(x)
+  func_process$get()   # Read cachematrix complete
+
+
+  func_process$
+cX$get()
+cacheSolve(cX)
+
+//
