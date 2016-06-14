@@ -24,10 +24,9 @@ makeCacheMatrix <- function(x = matrix())
   getInverse <- function()
   {
   }
-  
-  list(set = set, get = get,
-	     setmean = setmean,
-	     getmean = getmean)
+
+  list(set = set, get = get,setInverse = setInverse,getInverse = getInverse)
+
 }
 
 
@@ -39,7 +38,7 @@ makeCacheMatrix <- function(x = matrix())
 
 cacheSolve <- function(x, ...) 
 {
-        ## Return a matrix that is the inverse of 'x'
+  ## Return a matrix that is the inverse of 'x'
 
 }
 
@@ -53,3 +52,7 @@ func_process <- makeCacheMatrix(x)
 
 # read matrix complete
 func_process$get()
+
+xcache <- makeCacheMatrix(X)
+
+
